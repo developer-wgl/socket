@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mars.socket_test.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lin_ip"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:background="@drawable/button_style_blue"
+            android:id="@+id/client_ip"
+            android:hint="请输入服务端IP地址"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_1"
+        android:layout_below="@id/lin_ip"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:background="@drawable/button_style_blue"
+            android:layout_width="0dp"
+            android:phoneNumber="true"
+            android:layout_weight="5"
+            android:hint="请输入一个四位端口号"
+            android:layout_height="30dp"
+            android:id="@+id/editText_server"/>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/server_OK"
+            android:layout_weight="1"
+            android:text="确认"
+            android:layout_gravity="center"
+            android:background="@drawable/button_style_blue"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edit"
+        android:layout_below="@+id/textView"
+        android:hint="请输入要发送的消息……"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_below="@+id/edit"
+        android:text="发送消息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_below="@+id/lin_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/textView"
+
+        />
+</RelativeLayout>
